@@ -1,0 +1,117 @@
+/* App.css */
+
+/* Global Styles */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.App-header {
+  background-color: #dcdee4;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 2rem;
+  box-sizing: border-box;
+}
+
+/* Style for search bar */
+.search-bar-group {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar {
+  flex: 1;
+}
+
+.search-button {
+  margin-left: 1rem;
+  height: 56px;
+}
+
+/* Result Box */
+
+.boxes-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 30px;
+}
+
+.result-box-item {
+  width: 32%; /* Ensure the boxes take up equal width */
+  height: 500px; /* Set height to 400px */
+  background-color: #dcdee4;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+}
+
+/* Scrollbar styling */
+.result-box-item::-webkit-scrollbar {
+  width: 8px;
+}
+
+.result-box-item::-webkit-scrollbar-track {
+  background: #dcdee4; /* same as box background */
+  border-radius: 8px;
+}
+
+.result-box-item::-webkit-scrollbar-thumb {
+  background-color: #b0b3b9; /* slightly darker */
+  border-radius: 8px;
+  border: 2px solid #dcdee4; /* optional padding effect */
+}
+
+.result-box-item iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .boxes-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .result-box-item {
+    width: 90%; /* Make the boxes take more space on small screens */
+    margin-bottom: 20px;
+  }
+}
+
+/* Configuration section styles */
+.config-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #dcdee4;
+  border-radius: 5px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: #333;
+}
